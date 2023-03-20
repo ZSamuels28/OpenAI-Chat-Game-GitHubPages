@@ -1,0 +1,99 @@
+:root {
+  --font-size: 14px;
+  --font-family: monospace;
+  --background-color: black;
+  --text-color: white;
+  --input-background-color: gray;
+  --border-color: white;
+  --button-background-color: #333;
+  --button-text-color: #fff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.terminal {
+  position: relative;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+  padding: 20px;
+  width: 1000px;
+  height: 500px;
+  overflow: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  line-height: 1.5;
+}
+
+.terminal-text {
+  padding: 0 0 10px;
+}
+
+.terminal-form {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+}
+
+.terminal-form input[type='text'] {
+  flex: 1;
+  margin-right: 10px;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: 5px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  background-color: var(--input-background-color);
+  color: var(--text-color);
+  outline: none;
+  caret-color: var(--text-color);
+}
+
+.terminal-form input[type='submit'] {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  padding: 5px 10px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: none;
+  cursor: pointer;
+}
+
+.terminal-form input[type='text']::placeholder {
+  color: var(--text-color);
+}
+
+.button-container {
+  text-align: center;
+}
+
+.centered-button {
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+input[type='submit']:hover {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
